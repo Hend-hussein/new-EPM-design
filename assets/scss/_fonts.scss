@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans/OpenSans_Condensed-Regular.ttf') format('truetype');
+  font-weight: $font-regular;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans/OpenSans_SemiCondensed-Bold.ttf') format('truetype');
+  font-weight: $font-bold;
+}
+
+@font-face {
+  font-family: 'TheSansArabic';
+  src: url('../fonts/TheSansArabic/TheSansArabic-plain.ttf') format('truetype');
+  font-weight: $font-regular;
+}
+@font-face {
+  font-family: 'TheSansArabic';
+  src: url('../fonts/TheSansArabic/TheSansArabic-Bold.ttf') format('truetype');
+  font-weight: $font-bold;
+}
+
+@font-face {
+  font-family: 'TheSansArabic';
+  src: url('../fonts/TheSansArabic/TheSansArabic-Light.otf') format('opentype');
+  font-weight: $font-light;
+}
