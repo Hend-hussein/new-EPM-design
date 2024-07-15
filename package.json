@@ -1,0 +1,22 @@
+{
+  "name": "new-epm-design",
+  "version": "1.0.0",
+  "description": "new desing for EMP-front",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hend-hussein/new-EPM-design.git"
+  },
+  "author": "Hend-hussein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hend-hussein/new-EPM-design/issues"
+  },
+  "homepage": "https://github.com/Hend-hussein/new-EPM-design#readme",
+  "dependencies": {
+    "scss": "^0.2.4"
+  }
+}
