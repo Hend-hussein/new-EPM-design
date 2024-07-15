@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="331" height="321" viewBox="0 0 331 321">
+  <g id="Group_18691" data-name="Group 18691" transform="translate(-379 -3172)">
+    <g id="Group_18663" data-name="Group 18663" transform="translate(-14 220)">
+      <rect id="Rectangle_2806" data-name="Rectangle 2806" width="19" height="19" transform="translate(705 3254)" fill="#33579c"/>
+      <text id="ممتاز" transform="translate(698 3269)" fill="#555" font-size="14" font-family="Almarai-Regular, Almarai"><tspan x="-30.282" y="0">ممتاز</tspan></text>
+    </g>
+    <g id="Group_18664" data-name="Group 18664" transform="translate(-103 190)">
+      <path id="Path_84039" data-name="Path 84039" d="M0,0H19V19H0Z" transform="translate(705 3284)" fill="#7fbf41"/>
+      <text id="جيدجدا" transform="translate(698 3298)" fill="#555" font-size="14" font-family="Almarai-Regular, Almarai"><tspan x="-37.702" y="0">جيدجدا</tspan></text>
+    </g>
+    <g id="Group_18665" data-name="Group 18665" transform="translate(-201 157)">
+      <rect id="Rectangle_2804" data-name="Rectangle 2804" width="19" height="19" transform="translate(705 3317)" fill="#098ea0"/>
+      <text id="جيد" transform="translate(698 3332)" fill="#555" font-size="14" font-family="Almarai-Regular, Almarai"><tspan x="-19.446" y="0">جيد</tspan></text>
+    </g>
+    <g id="Group_18666" data-name="Group 18666" transform="translate(-279 126)">
+      <rect id="Rectangle_2803" data-name="Rectangle 2803" width="19" height="19" transform="translate(705 3348)" fill="#007c6b"/>
+      <text id="مقبول" transform="translate(698 3362)" fill="#555" font-size="14" font-family="Almarai-Regular, Almarai"><tspan x="-39.732" y="0">مقبول</tspan></text>
+    </g>
+    <g id="pie_chart" data-name="pie chart" transform="translate(235.792 53)">
+      <g id="pie_chart-sector" data-name="pie chart-sector" transform="translate(178.996 3119)">
+        <path id="Photoshop-120-33.33_" data-name="Photoshop-120-33.33%" d="M65.052,0h130.1A130.1,130.1,0,0,1,130.1,112.674a130.1,130.1,0,0,1-130.1,0Z" transform="translate(130.108 195.157) rotate(-90)" fill="#33579c"/>
+        <path id="Illustrator-100-27.78_" data-name="Illustrator-100-27.78%" d="M130.106,83.63,65.053,196.3A130.1,130.1,0,0,1,30.44,0Z" transform="translate(46.478 260.21) rotate(-90)" fill="#7fbf41"/>
+        <path id="Xd-90-25.00_" data-name="Xd-90-25.00%" d="M99.666,130.108,0,46.478A130.1,130.1,0,0,1,183.3,30.442Z" transform="translate(0 229.77) rotate(-90)" fill="#289cab"/>
+        <path id="data4-50-13.89_" data-name="data4-50-13.89%" d="M0,99.666,83.63,0A130.1,130.1,0,0,1,130.1,99.666Z" transform="translate(30.442 130.104) rotate(-90)" fill="#007c6b"/>
+        <text id="_40_" data-name="40%" transform="translate(207.212 103)" fill="#fff" font-size="14" font-family="Almarai-Regular, Almarai"><tspan x="-25.186" y="0">40%</tspan></text>
+        <text id="_30_" data-name="30%" transform="translate(149.212 208)" fill="#fff" font-size="14" font-family="Almarai-Regular, Almarai"><tspan x="-24.416" y="0">30%</tspan></text>
+        <text id="_20_" data-name="20%" transform="translate(65.212 143)" fill="#fff" font-size="14" font-family="Almarai-Regular, Almarai"><tspan x="-24.514" y="0">20%</tspan></text>
+        <text id="_10_" data-name="10%" transform="translate(110.212 59)" fill="#fff" font-size="14" font-family="Almarai-Regular, Almarai"><tspan x="-22.736" y="0">10%</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
