@@ -190,9 +190,15 @@
     .navbar-collapse{
       box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.3);
       padding: 1rem 2rem;
+      display: flex !important;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+      gap: 1rem;
       
       .navbar-nav{
         margin-bottom: 1rem;
+        max-height: 600px;
+        overflow-y: scroll;
         .nav-item{
           padding-inline-start: 0.5rem !important;
           .dropdown-menu{
@@ -211,6 +217,24 @@
           width: 2px !important;
           height: 80% !important;
           max-height: 40px;
+        }
+      }
+
+      .user-section{
+        display: block !important;
+        .user-info{
+          display: inline-block;
+        }
+        .dropdown-menu{
+          position: static;
+          // display: block;
+          border: none !important;
+          box-shadow: none !important;
+          text-align: start !important;
+          padding: 0;
+          .dropdown-item{
+            padding: 0.5rem 0 !important;
+          }
         }
       }
 
@@ -308,7 +332,24 @@
 }
 
 @media screen and (min-width: 992px){
- 
+  .header {
+    .head{
+      
+      .navbar-collapse {
+        .navbar-nav{
+          
+          .nav-item {
+            .dropdown-menu{
+              position: fixed;
+              width: 100vw;
+              top: 135px;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1200px){
@@ -336,6 +377,11 @@
 }
 
 @media screen and (max-width: 1400px){
+  .head{
+    .content-wrapper{
+      width: 95%;
+    }
+  }
   .region-info{
     padding: 2rem 0 !important;
 

@@ -2,6 +2,10 @@
   font-family: "TheSansArabic", "OpenSans";
 }
 
+html{
+  overflow-x: hidden;
+}
+
 .btn:focus {
   box-shadow: none;
 }
@@ -10,6 +14,10 @@
   color: #fff;
   background: $color-sub-green;
   padding: 0.3rem 2rem
+}
+
+.dropdown-toggle::after{
+  display: none;
 }
 
 section{
@@ -82,18 +90,95 @@ textarea{
 .nav-item{
   position: relative;
   .dropdown-menu{
+    background-color: $color-primary;
     text-align: center;
     border: none;
-    border-bottom: 5px solid $color-sub-green;
-    border-radius: 0 0 15px;
+    border-radius: 0 0 5rem;
     box-shadow: 3px 3px 8px rgba($color: #000000, $alpha: 0.3);
-    transition: all 0.6s ease-out;
-    .dropdown-item{
-      padding: 0.5rem 5rem;
-      color: $color-primary;
-      font-size: $fs-lg
-    }
+    transition: 0.6s ease-out;
+    display: block !important;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    padding-inline-start: 12%;
+    z-index: 101;
 
+    .dropdown-body{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8%;
+      padding-inline-start: 10%;
+      .nav-menu-links{
+        text-align: start;
+        padding-bottom: 1rem;
+        .menu-heading{
+          padding: 0.25rem;
+          .menu-title{
+            color: #fff;
+            font-size: $fs-lg;
+            padding-inline-start: 1rem;
+          }
+        }
+      }
+      ul{
+        padding-inline-start: 3rem;
+        list-style: url('../imgs/icons/bullet.svg');
+        .dropdown-item{
+          padding: 0.5rem;
+          color: #fff;
+          font-size: $fs-normal;
+          font-weight: 100 !important;
+          width: fit-content;
+          position: relative;
+        }
+
+        .dropdown-item::after{
+          position: absolute;
+          content: '';
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          border-radius: 5px;
+          background-color: rgba($color: $color-primary-green, $alpha: 1);
+        }
+    
+        .dropdown-item:hover{
+          background-color: transparent;
+        }
+
+        .dropdown-item:hover::after{
+          opacity: 1;
+        }
+      }
+    }
+    
+
+
+  }
+
+  .dropdown-menu::after{
+    content: '';
+    background-image: url('../imgs//patterns/dropdown-pattern.svg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .dropdown-menu.show{
+    height: fit-content;
+    opacity: 1;
+    padding: 2rem 2rem 5rem !important;
+    min-height: 350px;
   }
 }
 .nav-item::after {
@@ -421,484 +506,4 @@ textarea{
 
 //header
 
-.header {
-  position: relative;
-  font-weight: 400;
-  height: 800px;
-  background-image: url('../imgs/gallery/hero.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 3rem;
-  .head {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 5px solid $color-primary-green;
-    background-color: #fff;
-    padding: 1em 0;
-    .navbar {
-      padding: 0;
 
-      .container-fluid {
-        font-size: $fs-normal;
-        padding: 0;
-
-        .navbar-brand {
-          padding: 0 0.2rem;
-          margin: 0;
-
-          .logo {
-            max-width: 100px;
-          }
-        }
-
-        .navbar-toggler {
-          .navbar-toggler-icon {
-            color: $color-primary;
-          }
-        }
-
-        .navbar-toggler:focus {
-          box-shadow: none;
-        }
-
-        .collapse {
-          .navbar-nav {
-            padding: 0;
-            flex: 1;
-            gap: 0.5rem;
-
-            .nav-item {
-              padding: 0.3rem;
-              cursor: pointer;
-              position: relative;
-
-              .nav-link {
-                color: $color-primary;
-                line-height: 21px;
-
-                svg {
-                  margin-inline-start: 5px;
-                }
-              }
-
-              .nav-link::after {
-                display: none;
-              }
-            }
-
-            
-          }
-
-          .btn-search-icon {
-            padding: 0;
-
-            svg {
-              color: $color-primary;
-              width: 1.5rem;
-              height: 1.5rem;
-              stroke: $color-primary;
-            }
-          }
-
-          .btn-signin {
-            font-size: $fs-normal;
-            color: $color-primary;
-            padding: 0.5rem 2rem;
-            border: 1px solid $color-primary;
-            border-radius: 8px;
-          }
-
-          .btn-signin:hover {
-            color: #fff;
-            background: $color-primary;
-          }
-        }
-      }
-    }
-  }
-
-  .head.transparent{
-    background: rgba($color: #000000, $alpha: 0.8);
-    border: none;
-    .collapse{
-      .nav-item{
-        .nav-link{
-          color: #fff !important;
-        }
-      }
-
-      .nav-item::after{
-        background: #fff !important;
-      }
-
-      .btn-search-icon{
-        svg{
-          stroke: #fff !important;
-        }
-      }
-
-      .btn-signin{
-        color: #fff !important;
-        border-color: #fff !important;
-      }
-      .btn-signin:hover{
-        background: none !important;
-      }
-    }
-
-    .navbar-toggler {
-      .navbar-toggler-icon {
-        color: #fff !important;
-      }
-    }
-
-  }
-}
-
-// E-services
-.e-services{
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  .head{
-    h3{
-      color: $color-primary;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-      margin-inline-start: 1rem;
-    }
-  }
-  
-  .e-services-body{
-    .e-services-tabs{
-      .tab-pane{
-        .card{
-          position: relative;
-          cursor: pointer;
-
-          .card-body{
-            .card-sub-title{
-              margin-inline-end: 0.3rem;
-            }
-          }
-          .overlay{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background: rgba($color: $color-primary, $alpha: 0.99);
-            border-radius: inherit;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 1rem 1.5rem;
-            color: #fff;
-            line-height: 30px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            p{
-              color: rgba($color: #fff, $alpha: 0.9);
-            }
-          }
-
-        }
-        .card:hover  .overlay{
-          opacity: 1;
-        }
-      }
-
-      }
-    }
-}
-
-// About
-.about{
-  height: 440px;
-  background-image: url('../imgs/patterns/about-pattern.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-
-.news{
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  color: $color-primary;
-  overflow: hidden;
-
-  .head{
-    margin-bottom: 2rem;
-   h3{
-    display: inline-block;
-    border-bottom: 2px solid $color-primary;
-    padding: 0.25rem 0.5rem;
-   }
-  }
-
-  .slide-container{
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    .slide-content{
-      width: 100%;
-      .card{
-        width: 350px !important;
-        height: 350px !important;
-        box-shadow: none;
-        text-align: start;
-        
-        .card-img{
-          width: 100%;
-          padding: 0;
-          img{
-            width: 100%;
-            height: 220px;
-            
-          }
-        }
-
-        .card-body{
-          padding: 0.5rem;
-          
-          p{
-            margin: 0;
-          }
-          .card-title{
-            color: $color-primary;
-            font-size: $fs-normal;
-            
-          }
-
-          .news-date-time{
-            color: $color-gary-normal;
-            font-size: $fs-md;
-          }
-
-          .news-link{
-            margin-top: 1rem;
-            color: $color-sub-green;
-            font-size: $fs-normal;
-          }
-        }
-       }
-    }
-  }
-}
-
-.region-map{
-  height: 800px;
-  background-image: url('../imgs/gallery/map.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-  margin-bottom: 0;
-  .map{
-    padding: 2rem;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    svg{
-
-
-      .gobail-region{
-        transition: fill 0.5s ease-in-out;
-        
-      }
-
-      .gobail-region.active{
-        fill: $color-primary-green;
-      }
-      .gobail-region:hover{
-        fill: $color-primary-green;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .region-info{
-    width: 0;
-    opacity: 0;
-    height: 100%;
-    background: rgba($color: $color-sub-green-light, $alpha: 0.7);
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5%;
-    transition: opacity 0.5s ease, width 0.3s ease 0.2s, height 0.3s ease 0.2s;
-    .nav-tabs{
-      justify-content: center;
-      width: fit-content;
-      padding: 0 !important;
-      gap: 0 !important;
-      height: fit-content;
-      border-bottom: 4px solid #fff;
-      .nav-item{
-        height: fit-content;
-        padding: 0 1rem;
-        
-        .nav-link{
-          color: #fff !important;
-          border: none !important;
-          font-weight: 500 !important;
-        }
-        .nav-link.active{
-          background: transparent;
-        }
-      }
-      .nav-item::after{
-        bottom: -4px;
-        height: 4px;
-      }
-    }
-
-    .tab-content{
-      width: 80%;
-      padding: 1rem;
-      
-      .tab-body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        img{
-          width: 90%;
-          object-fit: cover;
-        }
-        .stats{
-          display: flex;
-          color: #fff;
-          justify-content: space-between;
-          width: 80%;
-          .stats-card{
-            text-align: center;
-          }
-          border-bottom: 2px solid #fff;
-        }
-
-        .tab-content-info{
-          color: #fff;
-          text-align: justify;
-          font-size: $fs-xl;
-          line-height: 40px;
-          padding-top: 2rem;
-        }
-      }
-    }
-  }
-
-  .region-info.show{
-    width: 50%;
-    padding: 3rem 4rem;
-    opacity: 1;
-    transition: opacity 0.5s ease 0.2s, width 0.3s ease, height 0.3s ease;
-  }
-}
-
-.about-platform{
-  margin: 0;
-  background-color: rgba($color: #4281C6, $alpha: 0.03);
-  background-image: url('../imgs/patterns/about-platform.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 4rem;
-  .about-content{
-    padding: 4rem 1rem;
-    .about-title{
-      color: $color-primary;
-      margin-block-end: 2rem;
-    }
-
-    .about-info{
-      padding: 0 0 0 3rem;
-      font-size: $fs-x2;
-      line-height: 50px;
-    }
-  }
-
-  .about-stats{
-    .col-12{
-      .card{
-        margin: 0 auto;
-      }
-    }
-    .card{
-      text-align: center;
-      border: none;
-      border-radius: 6px;
-      box-shadow: 0 0 6px 1px rgba($color: $color-gray-light, $alpha: 0.8);
-      padding: 0.8rem 1.5rem;
-      min-width: 230px;
-      max-width: 300px;
-      .card-title{
-        color: $color-primary-green;
-        font-weight: bold;
-      }
-
-      .card-text{
-        color: $color-gray-dark;
-        font-weight: bold;
-      }
-    }
-  }
-}
-
-.feed-back{
-  .btn-group{
-    .radio{
-      flex: 0 !important;
-    }
-  }
-}
-
-.footer{
-  margin-top: 4rem;
-  padding-top: 4rem;
-  background-color: $color-primary;
-  background-image: url('../imgs/patterns/footer-pattern-2.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: auto;
-  color: #fff;
-  .footer-links{
-    border-bottom: 1px solid #fff;
-  }
-  
-  .list-group{
-    
-    .list-group-item{
-      width: auto;
-      padding: 0.5rem;
-      background: transparent;
-      color: #fff;
-      border: none;
-      svg{
-        margin-inline-end: 0.5rem;
-      }
-    }
-  }
-
-  .vision-logo{
-    max-width: 120px;
-  }
-
-  .socials{
-    gap: 2.2rem;
-  }
-}
