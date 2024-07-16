@@ -190,7 +190,7 @@
     .navbar-collapse{
       box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.3);
       padding: 1rem 2rem;
-      display: flex !important;
+      
       align-items: flex-start;
       flex-direction: column-reverse;
       gap: 1rem;
@@ -238,6 +238,10 @@
         }
       }
 
+    }
+
+    .navbar-collapse.show{
+      display: flex !important;
     }
   }
 

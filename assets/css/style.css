@@ -619,7 +619,6 @@ textarea {
   .header .navbar-collapse {
     box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.3);
     padding: 1rem 2rem;
-    display: flex !important;
     align-items: flex-start;
     flex-direction: column-reverse;
     gap: 1rem;
@@ -663,6 +662,9 @@ textarea {
   }
   .header .navbar-collapse .user-section .dropdown-menu .dropdown-item {
     padding: 0.5rem 0 !important;
+  }
+  .header .navbar-collapse.show {
+    display: flex !important;
   }
   .region-map {
     flex-direction: column;
