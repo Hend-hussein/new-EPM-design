@@ -2,17 +2,12 @@
 @import '_fonts.scss';
 @import 'containers.scss';
 @import '_custom.scss';
-@import '_responsive.scss';
+
 
 
 .header {
   position: relative;
   font-weight: 400;
-  height: 800px;
-  background-image: url('../imgs/gallery/hero.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   margin-bottom: 3rem;
   .head {
     position: fixed;
@@ -55,6 +50,7 @@
             padding: 0;
             flex: 1;
             gap: 0.5rem;
+            justify-content: center;
 
             .nav-item {
               padding: 0.3rem;
@@ -171,6 +167,15 @@
     }
 
   }
+}
+
+.hero{
+  margin-top: 140px;
+  height: 800px;
+  background-image: url('../imgs/gallery/hero.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 // E-services
@@ -326,7 +331,7 @@
     display: flex;
     justify-content: center;
     svg{
-
+      height: fit-content;
 
       .gobail-region{
         transition: fill 0.5s ease-in-out;
@@ -482,7 +487,7 @@
 }
 
 .footer{
-  margin-top: 4rem;
+  margin-top: 0;
   padding-top: 4rem;
   background-color: $color-primary;
   background-image: url('../imgs/patterns/footer-pattern-2.svg');
@@ -517,4 +522,222 @@
     gap: 2.2rem;
   }
 }
+
+
+// User Profile
+
+.user-profile{
+  margin-top: 135px;
+  display: flex;
+  min-height: 900px;
+  .user-section{
+    background: $color-primary;
+    padding: 3rem 1rem;
+    max-width: 300px;
+    .user-info{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 0;
+      align-items: center;
+      gap: 0.8rem;
+      
+    }
+
+    .user-data{
+      color: #fff;
+      font-size: $fs-lg;
+      word-wrap: break-word;
+      margin: 0;
+    }
+    .profile-picture{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+    }
+
+    .free-border{
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: #fff;
+    }
+  }
+
+  .profile-content{
+    background-image: url('../imgs/patterns/profile-pattern.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+    padding: 3rem 0;
+    overflow-x: hidden;
+    .content-wrapper{
+      max-width: 1200px;
+      
+      .heading{
+        margin-inline-start: 0.8rem;
+        color: $color-primary;
+        text-shadow: -4px 2px 6px rgba($color: $color-primary, $alpha: 0.4);
+        
+      }
+      .card-wrapper{
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 2rem;
+        
+        .card{
+          padding: 1rem;
+          width: 350px;
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.2);
+          .chart{
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .data-table{
+        margin-top: 3rem;
+        background: #fff;
+        border-radius: 16px;
+        padding: 1rem 0 0;
+        box-shadow: 0 0 10px 1px rgba($color: #000000, $alpha: 0.2);
+        // width: 80%;
+        
+      }
+    }
+  }
+}
+
+.login{
+  background-image: url('../imgs/gallery/bg-login.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  
+  .login-content{
+    background: $color-primary;
+    width: 450px;
+    .logo{
+      text-align: center;
+      padding: 2rem 1rem;
+      img{
+        max-width: 200px;
+      }
+    }
+
+    .user-type{
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      .radio{
+        color: #fff;
+        font-size: $fs-normal;
+        border: 1px solid;
+        border-color: inherit;
+        border-radius: 10px;
+        width: 40%;
+        padding: 0.5rem 0;
+        margin: 0.1rem 0;
+        transition: 0.7s ease-out;
+        
+      }
+      .radio:has(input[type="radio"]:not(:checked)):hover{
+        color: $color-primary-green;
+      }
+
+      .radio:has(input[type="radio"]:checked){
+        border: none;
+        background: $color-primary-green;
+        box-shadow: 0 0 10px 1px rgba($color: #000000, $alpha: 0.4);
+      }
+
+      // .radio:has(input[type="radio"]:not(:checked)) ~ .checked{
+      //   color: $color-primary-green;
+      // }
+
+      .radio:is(:last-child){
+        &:has(input[type="radio"]:checked) ~ .checked{
+          background: red;
+        }
+      }
+
+
+      .checked{
+        position: absolute;
+        border: $color-primary-green;
+        background: $color-primary-green;
+        border-radius: 10px;
+        width: 160px;
+        margin: 0;
+        top: 1%;
+        bottom: 1%;
+        left: unset;
+        right: 0;
+        
+
+      }
+    }
+
+    .form-login{
+      .form-group{
+        margin: 1rem 0;
+        text-align: center;
+        .form-control{
+          text-align: center;
+          background: transparent;
+          border-radius: 10px;
+          border-width: 2px;
+          caret-color: $color-sub-green;
+          color: #fff;;
+        }
+
+        .form-control:focus{
+          box-shadow: none;
+          border-color: $color-primary-green; 
+        }
+
+        .btn-login{
+          background: $color-primary-green;
+        }
+      }
+    }
+    .link{
+      margin: 1rem 0;
+      img{
+        margin-inline-end: 0.5rem;
+      }
+      a{
+        color: #fff;
+        text-decoration: none;
+        padding: 0.1rem 0;
+        border-bottom: 2px solid #fff;
+       
+      }
+    }
+  }
+}
+
+
+
+@import '_responsive.scss';
 

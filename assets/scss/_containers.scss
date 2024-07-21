@@ -7,3 +7,95 @@
   width: 80%;
   margin: 0 auto;
 }
+
+.custom-modal{
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: $color-primary-light, $alpha: 0.5);
+  align-content: center;
+  transform: translateY(-100vh);
+  opacity: 0;
+  transition: transform 0s ease-in-out 0.3s, opacity 0.3s ease-in-out;
+  .custom-modal-dialog{
+    margin: auto;
+    border: 3px solid $color-primary-normal;
+    box-shadow: 0 0 10px 1px rgba($color: $color-primary-normal, $alpha: 0.7);
+    border-radius: 12px;
+    background: #fff;
+    padding: 1.25rem;
+    width: 90%;
+    max-width: 1000px;
+    transform: translateY(-100vh);
+    transition: transform 0.6s ease-in-out;
+  }
+}
+
+.custom-modal.show{
+  transform: translateY(0vh);
+  opacity: 1;
+  transition: transform 0s ease-in-out , opacity 0.3s ease-in-out !important;
+  .custom-modal-dialog{
+    transform: translateY(0vh);
+  }
+}
+
+
+.table-container{
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  
+  .table{
+    margin: 0;
+    white-space: nowrap;
+    
+    
+    
+    thead{
+      tr{
+        border: none;
+      }
+    }
+    tbody{
+      tr{
+        border: none;
+        th,td{
+          color: rgba($color: $color-primary, $alpha:0.9);
+          padding: 1rem;
+          font-size: $fs-md;
+          align-content: center;
+          border: none;
+        }
+
+        .btn{
+          color: #fff;
+          background: $color-primary-light;
+          border-radius: 20px;
+          padding: 0.4rem 1.5rem;
+          transition: all .2s ease-in-out;
+        }
+
+        .btn:hover{
+          color: $color-primary-light;
+          background: #fff;
+          border: 1px solid $color-primary-light;
+        }
+      }
+      
+    }
+    tbody >tr:not(:last-child){
+      border-bottom: 1px solid $color-primary !important;
+      box-shadow: 0px 3px 8px 2px rgba($color: $color-primary, $alpha: 0.1);
+    
+    }
+    .heading{
+      padding:1rem;
+    }
+  }
+}
+
