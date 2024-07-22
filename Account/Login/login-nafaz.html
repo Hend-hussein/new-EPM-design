@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../assets/libs/bs5/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../assets/libs/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+  <main class="login nafaz">
+    <aside class="login-content">
+      <div class="logo">
+        <img src="../../assets/imgs/logo-white-no-text.png" alt="" srcset="">
+      </div>
+      <div class="steps mb-5">
+        <div class="step" id="step-1">
+          <div class="step-number">
+            <span>1</span>
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="step-title">
+            Enter ID
+          </div>
+          <div class="separator"></div>
+        </div>
+        <div class="step" id="step-2">
+          <div class="step-number">
+            <span>2</span>
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="step-title">
+            Verify
+          </div>
+        </div>
+      </div>
+      <div class="tab-content">
+        <div class="tab tab-id">
+          <h3 class="">Turn on 2-Step Verification</h3>
+          <p class="sub-text mb-5">Open "NAFAZ" app to verify your identity</p>
+          
+            <div class="form-group">
+              <input class="form-control" type="text" name="" id="" placeholder=" National ID">
+            </div>
+            <div class="form-group">
+              <button onclick="
+              document.getElementById('tab-verify').classList.add('show');
+              document.getElementById('step-1').classList.add('complete');
+              " class="btn btn-next form-control">
+                Continue
+              </button>
+            </div>
+        </div>
+        <div class="tab" id="tab-verify">
+          <h3 class="">Verify Code</h3>
+          <p class="sub-text mb-5">Click the number on your mobile that matches the number on the screen</p>
+          
+          <div class="form-group d-flex px-5 gap-2 justify-content-center">
+            <input class="form-control digit" type="text" name="" id="" value="53" disabled>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+  <script src="../../assets/libs/bs5/bootstrap.min.js"></script>
+  <script src="../../assets/libs/fontawesome/js/all.min.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

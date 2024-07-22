@@ -1117,26 +1117,11 @@ textarea {
   background: #49bcbc;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
 }
-.login .login-content .user-type .radio:is(:last-child):has(input[type=radio]:checked) ~ .checked {
-  background: red;
-}
-.login .login-content .user-type .checked {
-  position: absolute;
-  border: #49bcbc;
-  background: #49bcbc;
-  border-radius: 10px;
-  width: 160px;
-  margin: 0;
-  top: 1%;
-  bottom: 1%;
-  left: unset;
-  right: 0;
-}
-.login .login-content .form-login .form-group {
+.login .login-content .form-group {
   margin: 1rem 0;
   text-align: center;
 }
-.login .login-content .form-login .form-group .form-control {
+.login .login-content .form-group .form-control {
   text-align: center;
   background: transparent;
   border-radius: 10px;
@@ -1144,12 +1129,23 @@ textarea {
   caret-color: #098EA0;
   color: #fff;
 }
-.login .login-content .form-login .form-group .form-control:focus {
+.login .login-content .form-group .form-control:focus {
   box-shadow: none;
   border-color: #49bcbc;
 }
-.login .login-content .form-login .form-group .btn-login {
+.login .login-content .form-group .btn {
   background: #49bcbc;
+}
+.login .login-content .form-group .btn-next {
+  position: relative;
+}
+.login .login-content .form-group .btn-next::after {
+  content: url("../imgs/icons/arrow-right-solid.svg");
+  position: absolute;
+  right: 10px;
+  top: 25%;
+  width: 12px;
+  height: 12px;
 }
 .login .login-content .link {
   margin: 1rem 0;
@@ -1162,6 +1158,107 @@ textarea {
   text-decoration: none;
   padding: 0.1rem 0;
   border-bottom: 2px solid #fff;
+}
+
+.login.nafaz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.login.nafaz .login-content {
+  border-radius: 10px;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+.login.nafaz .login-content .steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.login.nafaz .login-content .steps .step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.login.nafaz .login-content .steps .step .step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ADA9AE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding: 0.25rem;
+  font-size: 18px;
+}
+.login.nafaz .login-content .steps .step .step-number svg {
+  display: none;
+}
+.login.nafaz .login-content .steps .step .step-number span {
+  display: block;
+}
+.login.nafaz .login-content .steps .step .step-title {
+  font-size: 20px;
+  margin-inline-end: 0.25rem;
+}
+.login.nafaz .login-content .steps .step .separator {
+  height: 2px;
+  width: 40px;
+  border: 1px solid #fff;
+}
+.login.nafaz .login-content .steps .step.complete .step-number {
+  background-color: #49bcbc;
+}
+.login.nafaz .login-content .steps .step.complete .step-number svg {
+  display: block;
+}
+.login.nafaz .login-content .steps .step.complete .step-number span {
+  display: none;
+}
+.login.nafaz .login-content .steps .step.complete .step-title {
+  color: #49bcbc;
+}
+.login.nafaz .login-content .steps .step.complete .separator {
+  border-color: #49bcbc;
+}
+.login.nafaz .login-content .tab-content {
+  width: 200%;
+  display: flex;
+  transition: transform 0.5s ease-out;
+  gap: 5%;
+  justify-content: space-between;
+  padding: 0 1.7rem;
+}
+.login.nafaz .login-content .tab-content .tab {
+  width: 47%;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+.login.nafaz .login-content .tab-content .tab .digit {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 0;
+  letter-spacing: 4px;
+  padding-inline-start: 4px;
+  text-align: center;
+}
+.login.nafaz .login-content .tab-content:has(.tab.show) {
+  transform: translateX(-50%);
+}
+.login.nafaz .login-content .tab-content:has(.tab.show) .tab-id {
+  opacity: 0;
+}
+.login.nafaz .login-content .sub-text {
+  color: #ADA9AE;
 }
 
 @media screen and (max-width: 575.98px) {
